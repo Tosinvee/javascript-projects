@@ -1,0 +1,14 @@
+.calc{
+    margin-bottom: 10px;
+    text-align: center;
+    width: 210px;
+    color: #7D0A0A;
+    border: solid black 2px;
+    font-size: 20px;
+}
+#btn{
+    background-color:#BF3131 ;
+    color: #EAD196;
+    border: solid black 2px;
+    width: 100%;
+}
