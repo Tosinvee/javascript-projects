@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="headings">TO_DO LIST</h1>
+      <br />
+      <div class="row">
+        <form action="">
+          <div class="myList">
+            <input
+              type="text"
+              placeholder="your list"
+              style="width: 300px"
+              id="box"
+            />
+          </div>
+          <br />
+
+          <div class="add">
+            <input
+              type="button"
+              value="ADD"
+              onclick="addItems()"
+              style="width: 100px"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="row">
+        <ul id="list_items"></ul>
+      </div>
+    </div>
+
+    <script>
+        function addItems() {
+            let items = document.getElementById('box');
+            let list_items = document.getElementById("list_items")
+            // to create an li tag with javascript
+            if(items.value != ""){
+              let make_li = document.createElement("li"); // opening tag of the li
+              make_li.appendChild(document.createTextNode(items.value));
+              list_items.appendChild(make_li) // closing tag
+              items.value="";
+
+              make_li.onclick = function () {
+                this.parentNode.removeChild(this); // delete element displayed on the to_do list when clicked
+              }
+
+
+            }
+            else{
+                alert("please enter a value")
+            }
+            
+        }
+    </script>
+  </body>
+</html>
